@@ -151,7 +151,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       </Dialog>
 
       {/* Desktop sidebar */}
-      <div className="hidden lg:flex lg:flex-col lg:w-72 lg:border-r lg:border-gray-200 lg:bg-white">
+      <div className="hidden fixed z-50 inset-0 lg:flex lg:flex-col lg:w-72 lg:border-r lg:border-gray-200 lg:bg-white">
         <div className="flex h-16 shrink-0 items-center px-6">
           <img alt="Logo" src="/logo_fb.png" className="h-8 w-auto" />
         </div>
@@ -221,7 +221,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           </div>
         </header>
 
-        <main className="flex-1 p-6 bg-gray-100 max-w-dvw">{children}</main>
+        <main className="flex-1  bg-gray-100 max-w-dvw lg:pl-72">
+          <div className="p-6">{children}</div>
+        </main>
       </div>
     </div>
   );
